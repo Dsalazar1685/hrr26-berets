@@ -209,12 +209,12 @@ if (req.session.passport.user) {
           }
           console.log('It found duplicate key --> ',newName);
           obj[newName] = list[key].reduce((acc,el) => {
-          acc.push({ name: el['name'], itemId: el['itemId']});
+          acc.push(el);
           return acc;
           },[]);
         } else {
         obj[key] = list[key].reduce((acc,el) => {
-          acc.push({ name: el['name'], itemId: el['itemId']});
+          acc.push(el);
           return acc;
         },[]);
         }
